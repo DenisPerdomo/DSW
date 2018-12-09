@@ -28,9 +28,10 @@ if (isset($_POST['action'])) {
             //Ejecutamos la sentencia con el array de los valores que se sustituyen en la sentencia.
             $stmt->execute(
                        array(
-                       ':mk' => $_POST['nombre'],
-                       ':yr' => $_POST['year'],
-                       ':mi' => $_POST['kilometros'])
+                       ':mk' => htmlentities($_POST['nombre']),
+                       ':yr' => htmlentities($_POST['year']),
+                       ':mi' => htmlentities($_POST['kilometros'])
+                       )
                    );
             //Mensaje para indicar que se ha insertado correctamente
             $_SESSION['success'] = "Registro insertado correctamente";
