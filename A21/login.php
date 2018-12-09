@@ -32,11 +32,11 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
             header("Location: view.php");
             return;
         } else {
+            error_log("Login fail: ".$_POST['email']." Hash: "." $check"." Salt: ".$salt);
             //Si está mal añadimos al sesión el mensaje de error.
             $_SESSION['error'] = "Contraseña Incorrecta";
             header("Location: login.php");
             return;
-            error_log("Login fail: ".$_POST['email']." Hash: "." $check"." Salt: ".$salt);
         }
     }
 }
