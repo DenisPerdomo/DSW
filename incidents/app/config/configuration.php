@@ -10,6 +10,6 @@ define('DB_PASS', '2pJstfFHwPHaGiMB');
 define('RUTA_APP', dirname(dirname(__FILE__)));
 
 //Ruta URL ejemplo:http://192.168.56.102/mvc/
-define('RUTA_URL', 'http://incidents.appingnet.com/incidents/');
+define('RUTA_URL', 'http://incidents.appingnet.com/');
 
 define('SITENAME', 'APP INCIDENTS - DENIS PERDOMO');
