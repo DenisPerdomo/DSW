@@ -1,0 +1,14 @@
+<input type="number"
+min="1"
+max="100"
+value="{{$item->quantityCart}}"
+id="product_{{$item->id}}"
+>
+<a
+    href="#"
+    class="btn btn-warning btn-update-item"
+    data-href="{{route('cart-update', $item->id)}}"
+    data-id="{{$item->id}}"
+>
+    <i class="fa fa-refresh"></i>
+</a>
