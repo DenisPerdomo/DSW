@@ -29,6 +29,11 @@ class CatalogController extends Controller
     }
     public function postCreate(Request $request)
     {
+        request()->validate([
+            'clientName' => 'required|alpha',
+            'clientEmail' => 'required|email',
+            'clientDate' => 'required|date_format:d/m/Y'
+        ]);
         if ($request->hasFile('profileImage')) {
             $path = $request->profileImage->store('images', 'public');
             $cliente = new Cliente;
